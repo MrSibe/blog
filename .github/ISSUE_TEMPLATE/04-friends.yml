@@ -1,0 +1,63 @@
+name: 友链申请
+description: 申请交换友情链接
+title: "[友链申请] "
+labels: ["friend-link"]
+assignees: ["MrSibe"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你愿意和我交换友链 🌟
+
+        请**先在你的站点上添加本站友链**，再填写下面的表单。
+
+        **我的站点信息**（方便你复制）
+
+        ```
+        名称: 西贝的代码宇宙
+        地址: https://mrsibe.top
+        简介: 在星辰与字节之间，写下一行属于宇宙的代码。
+        头像: https://mrsibe.top/images/avatar-128.jpg
+        ```
+
+        > 添加完成后我会在这里回复你。如果站点长期无法访问，或内容方向变化较大，
+        > 我可能会移除友链，就不再单独通知了。
+  - type: input
+    id: site-name
+    attributes:
+      label: 站点名称
+      placeholder: 例如：西贝的代码宇宙
+    validations:
+      required: true
+  - type: input
+    id: site-url
+    attributes:
+      label: 站点地址
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: site-description
+    attributes:
+      label: 站点简介
+      description: 一句话介绍，建议 30 字以内
+      placeholder: 在星辰与字节之间，写下一行属于宇宙的代码。
+    validations:
+      required: true
+  - type: input
+    id: site-avatar
+    attributes:
+      label: 头像地址
+      description: 图片直链（png / jpg / webp / svg）。暂时没有可以留空，我会用首字母头像代替。
+      placeholder: https://example.com/avatar.png
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已在站点上添加了本站友链
+          required: true
+        - label: 我的站点以原创内容为主，且可以正常访问
+          required: true
