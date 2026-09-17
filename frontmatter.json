@@ -7,13 +7,17 @@
     {
       "title": "posts",
       "path": "[[workspace]]/src/content/posts"
+    },
+    {
+      "title": "spec",
+      "path": "[[workspace]]/src/content/spec"
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
       "pageBundle": true,
-      "previewPath": "'blog'",
+      "previewPath": "/",
       "filePrefix": null,
       "clearEmpty": true,
       "fields": [
@@ -34,6 +38,11 @@
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
+        },
+        {
+          "title": "updated",
+          "name": "updated",
+          "type": "datetime"
         },
         {
           "title": "preview",
@@ -58,7 +67,7 @@
         },
         {
           "title": "language",
-          "name": "language",
+          "name": "lang",
           "type": "string"
         }
       ]
