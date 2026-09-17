@@ -5,8 +5,7 @@ description: 项目确实在前进，但你对它的理解，有没有一起前�
 tags:
 - AI
 - Vibe Coding
-- 随笔
-category: 工具与随笔
+category: AI 与 Agent
 draft: false
 ---
 

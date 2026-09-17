@@ -5,8 +5,7 @@ description: 本文是「用 Go 实现 Redis」系列的第二篇。我们先用
 tags:
 - Go
 - Redis
-- RESP
-- 内存数据库
+- 数据库
 category: 后端与系统
 draft: false
 ---

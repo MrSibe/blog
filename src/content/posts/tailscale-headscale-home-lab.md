@@ -4,7 +4,6 @@ published: 2026-04-13 10:00:00+08:00
 description: 记录我为宿舍 NAS 部署 Headscale，并用 Tailscale 客户端连接不同设备的过程。
 tags:
 - Tailscale
-- Headscale
 - NAS
 - 网络
 category: 后端与系统

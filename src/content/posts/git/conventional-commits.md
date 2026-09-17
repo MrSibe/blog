@@ -4,8 +4,7 @@ published: 2025-11-18 17:26:35+08:00
 description: 整理 Conventional Commits 的基本格式，以及我常用的提交类型。
 tags:
 - Git
-- Conventional Commits
-category: 工具与随笔
+category: 开发工具
 draft: false
 ---
 

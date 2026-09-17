@@ -4,9 +4,8 @@ published: 2026-01-28 11:00:00+08:00
 description: 记录我在 MacBook 上实际使用的开发工具、AI 助手和系统增强软件。
 tags:
 - macOS
-- 开发工具
 - 效率工具
-category: 工具与随笔
+category: 开发工具
 draft: false
 ---
 

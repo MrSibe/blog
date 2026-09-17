@@ -4,7 +4,6 @@ published: 2026-04-15 17:15:00+08:00
 description: 拆开一条 HTTP/1.1 请求和响应，看看起始行、字段、空行与消息体分别放了什么。
 tags:
 - HTTP
-- Web
 - 后端基础
 category: 后端与系统
 draft: false

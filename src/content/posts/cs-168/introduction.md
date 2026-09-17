@@ -3,7 +3,7 @@ title: CS 168 | 导论
 published: 2025-10-07 21:31:58+08:00
 description: 我的 Berkeley CS 168 学习笔记，从互联网的基本结构开始理解计算机网络。
 tags:
-- 计算机网络
+- 网络
 - 公开课
 category: 课程笔记
 draft: false

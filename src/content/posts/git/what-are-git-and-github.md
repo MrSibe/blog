@@ -5,8 +5,7 @@ description: 用几个简单场景解释 Git 为什么需要版本、分支和�
 tags:
 - Git
 - GitHub
-- 版本控制
-category: 工具与随笔
+category: 开发工具
 draft: false
 ---
 

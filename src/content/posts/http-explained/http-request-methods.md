@@ -4,7 +4,6 @@ published: 2026-04-15 17:16:00+08:00
 description: 整理常见 HTTP 方法的标准语义，以及安全与幂等这些属性在工程中意味着什么。
 tags:
 - HTTP
-- Web
 - 后端基础
 category: 后端与系统
 draft: false

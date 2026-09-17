@@ -6,7 +6,7 @@ tags:
 - 终端
 - Shell
 - 操作系统
-category: 工具与随笔
+category: 开发工具
 draft: false
 ---
 

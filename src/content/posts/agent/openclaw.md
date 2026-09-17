@@ -5,8 +5,7 @@ description: 用了 OpenClaw 和 Hermes Agent 一段时间后，我重新整理�
 tags:
 - Agent
 - OpenClaw
-- Hermes Agent
-- Skill
+- AI
 category: AI 与 Agent
 draft: false
 ---

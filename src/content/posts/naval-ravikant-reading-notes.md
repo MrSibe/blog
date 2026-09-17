@@ -4,9 +4,9 @@ published: 2026-01-19 11:11:00+08:00
 description: 记录我读《纳瓦尔宝典》时对阅读习惯、选书和通过输出整理知识的理解。
 tags:
 - 阅读
-- 纳瓦尔宝典
 - 读书笔记
-category: 工具与随笔
+- 纳瓦尔宝典
+category: 随笔与阅读
 draft: false
 ---
 

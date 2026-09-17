@@ -5,8 +5,7 @@ description: 本文是「用 Go 实现 Redis」系列的第一篇，主要讨论
 tags:
 - Go
 - Redis
-- RESP
-- 网络协议
+- 网络
 category: 后端与系统
 draft: false
 ---

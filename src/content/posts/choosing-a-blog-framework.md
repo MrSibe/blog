@@ -3,10 +3,9 @@ title: 我用过 WordPress、VuePress、Hexo 和 Hugo 后的选择
 published: 2025-09-29 11:11:00+08:00
 description: 记录几次更换博客框架的过程，以及我最终为什么把博客迁移到 Hugo。
 tags:
-- Hugo
-- Hexo
 - 个人博客
-category: 工具与随笔
+- Hugo
+category: 随笔与阅读
 draft: false
 ---
 

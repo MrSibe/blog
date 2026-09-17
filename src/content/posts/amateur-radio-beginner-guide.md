@@ -4,9 +4,6 @@ published: 2026-04-15 10:00:00+08:00
 description: 记录我学习业余无线电、参加操作技术能力验证和准备设置电台的过程。
 tags:
 - 业余无线电
-- HAM
-- 能力验证
-- 无线电台
 category: 天文与无线电
 draft: false
 ---
