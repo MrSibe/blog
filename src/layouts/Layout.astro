@@ -20,16 +20,11 @@ import type { Favicon } from "../types/config";
 import { pathsEqual, url } from "../utils/url-utils";
 import "katex/dist/katex.css";
 
-// Global styles (imported explicitly, in a fixed order, so Tailwind's
-// `@apply` of custom classes like `.link` resolves deterministically).
+// Global styles. styles/global.css bundles the plain-CSS files into a single
+// stylesheet (see its comment); the .styl files are imported separately.
 import "../styles/variables.styl";
-import "../styles/main.css";
-import "../styles/markdown.css";
+import "../styles/global.css";
 import "../styles/markdown-extend.styl";
-import "../styles/expressive-code.css";
-import "../styles/photoswipe.css";
-import "../styles/scrollbar.css";
-import "../styles/transition.css";
 
 interface Props {
 	title?: string;

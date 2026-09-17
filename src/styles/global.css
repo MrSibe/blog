@@ -1,0 +1,14 @@
+/* Single entry point for global styles.
+ *
+ * These are pulled in with @import (resolved by postcss-import) instead of
+ * separate JS imports, so Tailwind always sees them as ONE stylesheet.
+ * Otherwise markdown.css / main.css get processed as separate PostCSS runs
+ * and `@apply link` fails whenever markdown.css happens to be processed
+ * first — a race that broke the build intermittently.
+ */
+@import "./main.css";
+@import "./markdown.css";
+@import "./expressive-code.css";
+@import "./photoswipe.css";
+@import "./scrollbar.css";
+@import "./transition.css";
