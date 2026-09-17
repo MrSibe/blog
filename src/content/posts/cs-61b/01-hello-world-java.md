@@ -1,0 +1,142 @@
+---
+title: CS 61B | Hello World Java
+published: 2025-11-03 10:47:08+08:00
+description: CS 61B 学习笔记：从 Hello World 开始熟悉 Java 程序的结构、编译和运行。
+tags:
+- Java
+- 公开课
+category: 课程笔记
+draft: false
+---
+
+## Hello world
+
+下面是 Java 的第一个 Hello world。
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
+```
+
+面向对象的特性是：所有的代码都放在类（class）里面。
+
+`public static void main (String[] args)` 是 main函数的定义。
+
+## Java 编译运行
+
+安装好 JDK 之后，想要运行 Java 程序，需要以下两个步骤：
+
+1. 编译 Java 源文件。
+2. 运行字节码文件。
+
+```bash
+$ javac HelloWorld.java  # 1. javac指令编译
+$ java HelloWorld        # 2. java指令运行
+Hello World! 
+```
+
+## 变量和循环
+
+```java
+public class HelloNumbers {
+    public static void main(String[] args) {
+        int x = 0;
+        while (x < 10) {
+            System.out.print(x + " ");
+            x = x + 1;
+        }
+    }
+}
+```
+
+编译运行之后这样显示：
+
+```bash
+$ javac HelloNumbers.java
+$ java HelloNumbers
+0 1 2 3 4 5 6 7 8 9 
+```
+
+这里主要是区分 `System.out.println` 和 `System.out.print` 的区别：`System.out.println` 会换行， `System.out.print` 则不换行。
+
+## 强类型语言
+
+Java 是一个**强制类型定义**的语言（大部分编译型的编程语言都是强类型），也就是说我们定义一个变量的时候需要声明它的**类型**和名称。
+
+Python 则相反，x 可以是 int，过一会也可以变成 Dog 类型都可以。
+
+```java
+public class HelloNumbers {
+    public static void main(String[] args) {
+        int x = 0;
+        while (x < 10) {
+            System.out.print(x + " ");
+            x = x + 1;
+        }
+        x = "horse";
+    }
+}
+```
+
+编译后会显示：
+
+```bash
+$ javac HelloNumbers.java 
+HelloNumbers.java:9: error: incompatible types: String cannot be converted to int
+        x = "horse";
+                ^
+1 error
+```
+
+这就是强类型定义的证明：定义为整数类型的 `x`，在经过 `x = "horse"` 赋值语句之后通过不了编译。
+
+当然有例外：
+
+```java
+String h = 5 + "horse";
+```
+
+这条语句就可以通过。Java 具有字符串拼接的特性，数字和字符串通过 `+` 拼接在一起，数字会强制转换为字符串：`"5horse"`
+
+## Java 函数定义
+
+先来一段 Python：
+
+```python
+def larger(x, y):
+    if x > y:
+        return x
+    return y
+
+print(larger(8, 10))
+```
+
+刚刚提到过 Java 的所有代码写在类里面，所以加上类，改一下 print 的方法就可以了。
+
+```java
+public class LargerDemo {
+    public static int larger(int x, int y) {
+        if (x > y) {
+            return x;
+        }
+        return y;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(larger(8, 10));
+    }
+}
+```
+
+## 代码规范
+
+详细的代码规范可以在这里查看：
+
+[Style Guide \| CS 61B Spring 2019](https://sp19.datastructur.es/materials/guides/style-guide.html)
+
+顺便提一下 Javadoc：有一种注释方法，可以通过 Javadoc 生成 HTML 文档。Java 程序员可以给每一个函数加上这样的注释，用 Javadoc 生成 HTML，方便后续的程序员读懂代码。
+
+这种注释方法是：`/** 注释内容 */`

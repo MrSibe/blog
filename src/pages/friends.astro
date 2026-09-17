@@ -1,0 +1,135 @@
+---
+import { Icon } from "astro-icon/components";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+
+// Fuwari has no built-in friends/links page, so this is a custom page.
+// Friend entries and their logos are migrated from the Hugo site
+// (content/friends.md and data/friends.yml in mrsibe-blog history).
+// Friends without a logo fall back to a first-letter avatar.
+const friends = [
+	{
+		name: "梦辰の小窝",
+		url: "https://mc.mimeng.top",
+		desc: "Eagerly Anticipating Our Reunion",
+		avatar: "https://mc.mimeng.top/_astro/avatar.C0sWSkbw_Z2aF073.avif",
+	},
+	{
+		name: "Soulter's Blog",
+		url: "https://blog.soulter.top/",
+		desc: "The world is your canvas!",
+		avatar: "https://blog.soulter.top/assets/avatar.webp",
+	},
+	{
+		name: "CAICAIIs.World",
+		url: "https://caicaiis.cc/",
+		desc: "愚者在月影之中怀抱虚妄",
+		avatar: "https://caicaiis.cc/assets/images/photo.jpg",
+	},
+	{
+		name: "Kinnari's Blog",
+		url: "https://kinnari-blog.vercel.app/",
+		desc: "梦想是成为一只 fumo!",
+		avatar: "https://kinnariyamamatanha.github.io/avatar.png",
+	},
+	{
+		name: "变星矿工",
+		url: "https://www.vs-miner.top/",
+		desc: "业余变星搜寻爱好者",
+		avatar: "https://www.vs-miner.top/images/logo.svg",
+	},
+	{
+		name: "果砸的博客",
+		url: "http://www.168hours.top:7777/",
+		desc: "果砸的博客",
+		avatar: "",
+	},
+	{
+		name: "Frederick",
+		url: "https://frederick2313072.github.io/",
+		desc: "Welcome to my Alter Ego's site!",
+		avatar: "",
+	},
+];
+
+const applyUrl = "https://github.com/MrSibe/mrsibe-blog/issues/2";
+---
+
+<MainGridLayout title="友链" description="友情链接：我的朋友们，志同道合的创作者和探索者。">
+    <div class="card-base px-6 md:px-9 py-6 relative w-full mb-4">
+        <div class="flex items-center gap-3">
+            <div class="shrink-0 w-11 h-11 rounded-xl bg-[var(--primary)] text-white flex items-center justify-center">
+                <Icon name="material-symbols:diversity-3" class="text-2xl" />
+            </div>
+            <h1 class="text-3xl font-bold text-black/90 dark:text-white/90 transition">友情链接</h1>
+        </div>
+        <p class="mt-3 text-black/75 dark:text-white/75 transition">
+            这里是我的朋友们，志同道合的创作者和探索者。
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        {friends.map((friend) => (
+            <a
+                href={friend.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-base group p-4 flex items-center gap-4 transition-transform duration-300 hover:scale-[1.02]"
+            >
+                <div class="shrink-0 w-14 h-14 rounded-full overflow-hidden relative flex items-center justify-center bg-[var(--btn-regular-bg)]">
+                    {friend.avatar && (
+                        <img
+                            src={friend.avatar}
+                            alt={`${friend.name} 的头像`}
+                            loading="lazy"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none';this.parentElement.querySelector('[data-avatar-fallback]').style.display='flex';"
+                        />
+                    )}
+                    <div
+                        data-avatar-fallback
+                        class:list={[
+                            "absolute inset-0 items-center justify-center font-bold text-xl text-[var(--primary)] transition",
+                            friend.avatar ? "hidden" : "flex",
+                        ]}
+                    >
+                        {friend.name.charAt(0)}
+                    </div>
+                </div>
+
+                <div class="min-w-0 flex-1">
+                    <div class="font-bold truncate text-black/90 dark:text-white/90 group-hover:text-[var(--primary)] transition-colors">
+                        {friend.name}
+                    </div>
+                    <div class="text-sm truncate text-black/50 dark:text-white/50 group-hover:text-black/75 dark:group-hover:text-white/75 transition-colors">
+                        {friend.desc}
+                    </div>
+                </div>
+
+                <Icon
+                    name="fa6-solid:arrow-up-right-from-square"
+                    class="shrink-0 text-xs text-black/20 dark:text-white/20 group-hover:text-[var(--primary)] transition-colors"
+                />
+            </a>
+        ))}
+    </div>
+
+    <div class="card-base p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="shrink-0 w-11 h-11 rounded-full bg-[var(--primary)] text-white flex items-center justify-center">
+            <Icon name="material-symbols:add-link-rounded" class="text-2xl" />
+        </div>
+        <div class="flex-1 min-w-0">
+            <div class="font-bold text-black/90 dark:text-white/90 transition">想交换友链？</div>
+            <div class="text-sm text-black/50 dark:text-white/50 transition">
+                欢迎通过 GitHub Issue 联系我。
+            </div>
+        </div>
+        <a
+            href={applyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-regular rounded-lg px-4 h-10 font-bold active:scale-95 shrink-0"
+        >
+            提交申请
+        </a>
+    </div>
+</MainGridLayout>
